@@ -1,9 +1,12 @@
 1. Eager loaded lib1-a.component:
+<br />
 <lib-lib1-a />
 
 <hr />
 
-2. Defer-loaded lib2-a.component @defer (on interaction) {
+2. Defer-loaded lib2-a.component
+<br />
+@defer (on interaction) {
 <lib-lib2-a />
 } @placeholder {
 <div>SPIKE click me to load deferred - lib2-a component</div>
@@ -11,7 +14,9 @@
 
 <hr />
 
-3. Defer-loaded local lib3-a-WRAPPER-component @defer (on interaction) {
+3. Defer-loaded local lib3-a-WRAPPER-component
+<br />
+@defer (on interaction) {
 <app-lib3-a-wrapper />
 } @placeholder {
 <div>SPIKE click me to load deferred - lib3-a-wrapper component</div>

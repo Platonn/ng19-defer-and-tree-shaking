@@ -2,9 +2,9 @@
 
 This project demonstrates cases when Angular 19 tree-shakes unused internals of a (3rd party) library and when not - while importing just one component from a library. The cases are:
 
-1. Eagerly loaded component from library
-2. @Defer-loaded component from library
-3. @Defer-loaded local component that wraps a component from library
+1. ✅ Eagerly loaded component from library (tree shaking works)
+2. 😕 @Defer-loaded component from library (tree shaking doesn't work)
+3. ✅ @Defer-loaded local component that wraps a component from library (tree shaking works)
 
 ### How to run
 
