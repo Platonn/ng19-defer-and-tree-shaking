@@ -29,7 +29,10 @@ The project contains 3 libraries and a main application. Each library is simple 
 
 1. Eagerly loaded Component A from lib1
    - ✅ ONLY Component A is bundled into main.js
+   - <img width="251" alt="image" src="https://github.com/user-attachments/assets/2f332cfb-f971-4192-9eb6-7a81bd0099fe">
 2. Defer-loaded Component A from lib2
-   - 😕 WHOLE lib2 is bundled in a lazy loaded chunk (despite Component B and Service are unused!)
+   - 😕 WHOLE lib2 is bundled in a lazy loaded chunk - not only Component A, but also unused Component B and Service
+   - <img width="445" alt="image" src="https://github.com/user-attachments/assets/66fc2ec6-9d6b-402a-bf21-e574e1decfee">
 3. Defer-loaded Local Component that wraps Component A from lib3
-   - ✅ ONLY Component A is bundled (together with the wrapper component) in a lazy loaded chunk (but NOT Component B and Service from lib3!)
+   - ✅ ONLY Component A is bundled (together with the wrapper component) in a lazy loaded chunk (but NOT the unused Component B and Service from lib3!)
+   - <img width="443" alt="image" src="https://github.com/user-attachments/assets/cba9ebc9-7e0b-4ef7-b4e8-7b705a69c34b">
