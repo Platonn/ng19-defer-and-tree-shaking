@@ -1,59 +1,35 @@
-# TestStandaloneMinimal
+### Tree-shaking in Angular 19
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+This project demonstrates cases when Angular 19 tree-shakes unused internals of a (3rd party) library and when not - while importing just one component from a library. The cases are:
 
-## Development server
+1. Eagerly loaded component from library
+2. @Defer-loaded component from library
+3. @Defer-loaded local component that wraps a component from library
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### How to run
 
 ```bash
-ng generate component component-name
-```
+npm install
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+# Build all 3 libraries
+ng build lib1 && ng build lib2 && ng build lib3
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Build app
 ng build
+
+# Start http server on a production build
+npx http-server dist/test-standalone-minimal/browser
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Project structure
 
-## Running unit tests
+The project contains 3 libraries and a main application. Each library is simple and analogical: it contains a Component A, Component B and Service, e.g.: `lib1` contains `Lib1AComponent`, `Lib1BComponent` and `Lib1Service`.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Results
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Eagerly loaded Component A from lib1
+   - ✅ ONLY Component A is bundled into main.js
+2. Defer-loaded Component A from lib2
+   - 😕 WHOLE lib2 is bundled in a lazy loaded chunk (despite Component B and Service are unused!)
+3. Defer-loaded Local Component that wraps Component A from lib3
+   - ✅ ONLY Component A is bundled (together with the wrapper component) in a lazy loaded chunk (but NOT Component B and Service from lib3!)

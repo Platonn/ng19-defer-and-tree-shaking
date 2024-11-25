@@ -8,7 +8,9 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "paths": {
-      "lib1": ["./projects/lib1/src/public-api.ts"]
+      "lib1": ["./projects/lib1/src/public-api.ts"],
+      "lib2": ["./projects/lib2/src/public-api.ts"],
+      "lib3": ["./projects/lib3/src/public-api.ts"]
     },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,

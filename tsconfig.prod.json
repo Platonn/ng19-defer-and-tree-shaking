@@ -2,7 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "paths": {
-      "lib1": ["./dist/lib1"]
+      "lib1": ["./dist/lib1"],
+      "lib2": ["./dist/lib2"],
+      "lib3": ["./dist/lib3"]
     }
   }
 }
