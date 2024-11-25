@@ -4,4 +4,4 @@
 
 export * from './lib/lib1.service';
 export * from './lib/lib1-b.component';
-export * from './lib/lib1.component';
+export * from './lib/lib1-a.component';
