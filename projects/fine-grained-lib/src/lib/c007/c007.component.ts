@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'big-lib-c007',
-  imports: [],
-  template: `
-    <p>
-      c007 works!
-    </p>
-  `,
-  styles: ``
+  template: ` <p>c007 works!</p> `,
+  styles: ``,
 })
-export class C007Component {
-
-}
+export class C007Component {}
