@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'big-lib-c064',
-  imports: [],
-  template: `
-    <p>
-      c064 works!
-    </p>
-  `,
-  styles: ``
+  template: ` <p>c064 works!</p> `,
+  styles: ``,
 })
-export class C064Component {
-
-}
+export class C064Component {}

@@ -1,5 +1,5 @@
 /*
- * Public API Surface of big-lib
+ * Public API Surface of fine-grained-lib
  */
 
 export * from './lib/c001/c001.component';

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'big-lib-c066',
+  selector: 'fine-grained-lib-c066',
   template: ` <p>c066 works!</p> `,
   styles: ``,
 })

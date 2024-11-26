@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'big-lib-c365',
+  selector: 'fine-grained-lib-c365',
   template: ` <p>c365 works!</p> `,
   styles: ``,
 })

@@ -1,7 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-const BASE_PATH = "projects/fine-grained-lib/src/lib";
+// const BASE_PATH = "projects/fine-grained-lib/src/lib";
+const BASE_PATH = "projects/big-lib/src/lib";
 
 const generateComponent = (num) => `import { Component } from '@angular/core';
 
@@ -37,7 +38,7 @@ async function generateFiles() {
           join(dirPath, `c${num}.component.ts`),
           generateComponent(num)
         ),
-        writeFile(join(dirPath, "ng-package.json"), generateNgPackage()),
+        // writeFile(join(dirPath, "ng-package.json"), generateNgPackage()),
         writeFile(join(dirPath, "public-api.ts"), generatePublicApi(num)),
       ]);
 

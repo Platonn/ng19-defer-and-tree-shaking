@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'big-lib-c232',
+  selector: 'fine-grained-lib-c232',
   template: ` <p>c232 works!</p> `,
   styles: ``,
 })
