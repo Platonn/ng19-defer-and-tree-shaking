@@ -11,8 +11,17 @@
       "lib1": ["./projects/lib1/src/public-api.ts"],
       "lib2": ["./projects/lib2/src/public-api.ts"],
       "lib3": ["./projects/lib3/src/public-api.ts"],
-      "lib4": ["./projects/lib4/src/public-api.ts"]
+      "lib4": ["./projects/lib4/src/public-api.ts"],
+      "big-lib": ["./projects/big-lib/src/public-api.ts"],
+      "fine-grained-lib": ["./projects/fine-grained-lib/src/public-api.ts"],
+      "fine-grained-lib/src/lib/c001": [
+        "./projects/fine-grained-lib/src/lib/c001/public-api.ts"
+      ],
+      "fine-grained-lib/src/lib/a-service": [
+        "./projects/fine-grained-lib/src/lib/a-service/public-api.ts"
+      ]
     },
+
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,

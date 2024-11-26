@@ -5,7 +5,13 @@
       "lib1": ["./dist/lib1"],
       "lib2": ["./dist/lib2"],
       "lib3": ["./dist/lib3"],
-      "lib4": ["./dist/lib4"]
+      "lib4": ["./dist/lib4"],
+      "big-lib": ["./dist/big-lib"],
+      "fine-grained-lib": ["./dist/fine-grained-lib"],
+      "fine-grained-lib/src/lib/c001": ["./dist/fine-grained-lib/src/lib/c001"],
+      "fine-grained-lib/src/lib/a-service": [
+        "./dist/fine-grained-lib/src/lib/a-service"
+      ]
     }
   }
 }
