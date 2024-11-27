@@ -5,6 +5,7 @@ This project demonstrates cases when Angular 19 tree-shakes unused internals of 
 1. ✅ Eagerly loaded component from library (tree shaking works)
 2. 😕 @Defer-loaded component from library (tree shaking doesn't work)
 3. ✅ @Defer-loaded local component that wraps a component from library (tree shaking works)
+4. ✅ @Defer-loaded component from library imported via a local proxy-file instead of directly (tree shaking works)
 
 ### How to run
 
@@ -12,7 +13,7 @@ This project demonstrates cases when Angular 19 tree-shakes unused internals of 
 npm install
 
 # Build all 3 libraries
-ng build lib1 && ng build lib2 && ng build lib3
+ng build lib1 && ng build lib2 && ng build lib3 && ng build lib4
 
 # Build app
 ng build
@@ -36,3 +37,6 @@ The project contains 3 libraries and a main application. Each library is simple 
 3. Defer-loaded Local Component that wraps Component A from lib3
    - ✅ ONLY Component A is bundled (together with the wrapper component) in a lazy loaded chunk (but NOT the unused Component B and Service from lib3!)
    - <img width="443" alt="image" src="https://github.com/user-attachments/assets/cba9ebc9-7e0b-4ef7-b4e8-7b705a69c34b">
+4. Defer-loaded Component A from lib4 imported via a local proxy-file (instead of directly)
+   - ✅ ONLY Component A is bundled in a lazy loaded chunk (but NOT the unused Component B and Service from lib4!)
+   - (TODO add image)
