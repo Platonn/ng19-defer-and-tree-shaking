@@ -39,4 +39,5 @@ The project contains 3 libraries and a main application. Each library is simple 
    - <img width="443" alt="image" src="https://github.com/user-attachments/assets/cba9ebc9-7e0b-4ef7-b4e8-7b705a69c34b">
 4. Defer-loaded Component A from lib4 imported via a local proxy-file (instead of directly)
    - ✅ ONLY Component A is bundled in a lazy loaded chunk (but NOT the unused Component B and Service from lib4!)
-   - (TODO add image)
+   - ![image](https://github.com/user-attachments/assets/efc2c384-cf1d-4275-a4ff-9b19be602339)
+
